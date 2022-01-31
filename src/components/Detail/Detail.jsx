@@ -53,7 +53,7 @@ function Detail() {
   }
 
   return (
-    <div className="bg-black xl:h-screen">
+    <div className="">
       <Link to={"/"} style={{ color: "inherit", textDecoration: "inherit" }}>
         <button className="rounded-md bg-cyan-300 p-2 hover:bg-cyan-200 font-semibold m-4">
           Take me back home
