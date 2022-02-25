@@ -4,6 +4,8 @@ import Swal from "sweetalert2";
 import Cards from "../Cards/Cards";
 import Navbar from "../Navbar/Navbar";
 
+const { REACT_APP_API_KEY } = process.env;
+
 function Home() {
   const [cities, setCities] = useState([]);
 
@@ -13,7 +15,7 @@ function Home() {
 
   function onSearch(city) {
     axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${REACT_APP_API_KEY}`
     )
       .then((response) => {
         if (response.data.main !== undefined) {
