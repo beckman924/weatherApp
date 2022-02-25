@@ -13,7 +13,7 @@ function Home() {
 
   function onSearch(city) {
     axios(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${process.env.API_KEY}`
     )
       .then((response) => {
         if (response.data.main !== undefined) {
